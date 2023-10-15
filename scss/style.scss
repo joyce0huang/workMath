@@ -1,0 +1,90 @@
+.show {
+    height: 20vh;
+    background-color: #F5F5F5;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-box {
+        width: 40%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+    }
+
+    &-text {
+        height: 100%;
+        width: 80%;
+        border: 1px solid orange;
+        border-radius: 5px;
+    }
+
+    .left {
+        border-bottom: 2px solid orange;
+        letter-spacing: 2px;
+    }
+}
+
+.btn {
+    width: 50px;
+    padding: 5px;
+    border-radius: 40px;
+    background-color: #fff;
+    margin-left: 20px;
+    border: 1px solid orange;
+    color: orange;
+
+    &:hover {
+        background: orange;
+        color: #fff;
+    }
+}
+
+.keyboard {
+    height: 80vh;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+.row {
+    display: flex;
+}
+
+.key {
+    border: 2px solid white;
+    padding: 10px;
+    transition: all 0.3s;
+    text-align: center;
+
+    kbd {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px;
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .sound {
+        font-family: 'Open Sans', sans-serif;
+        color: orange;
+        letter-spacing: 1px;
+    }
+}
+
+// 點擊效果
+.playing {
+    transform: scale(1.1);
+    border-color: orange;
+}
+
+.copied {
+    background: orange;
+    color: $white;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文淵閣數學公式小工具</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- sounds ref : https://taira-komori.jpn.org/instrument01tw.html -->
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="show">
+            <div class="show-box left"></div>
+            <div class="show-box right">
+                <input type="text" value="" id="myInput" class="show-text">
+                <button onclick="copyBtn()" class="btn copybtn" style="width:100px;">Copy</button>
+                <button onclick="resetText()" class="btn resetbtn" style="width:100px;">reset</button>
+            </div>
+        </div>
+        <div class="keyboard">
+            <!-- 左方文字鍵 -->
+            <div class="word">
+                <div class="row">
+                    <div data-key="49" class="key"><kbd>≠</kbd><span class="sound">key 1</span></div>
+                    <div data-key="50" class="key"><kbd>,</kbd><span class="sound">key 2</span></div>
+                    <div data-key="51" class="key"><kbd>￣線段</kbd><span class="sound">key 3</span></div>
+                    <div data-key="52" class="key"><kbd>︵弧線</kbd><span class="sound">key 4</span></div>
+                    <div data-key="53" class="key"><kbd>→向量</kbd><span class="sound">key 5</span></div>
+                    <div data-key="54" class="key"><kbd>平方</kbd><span class="sound">key 6</span></div>
+                    <div data-key="55" class="key"><kbd>√根號</kbd><span class="sound">key 7</span></div>
+                    <div data-key="56" class="key"><kbd>分數</kbd><span class="sound">key 8</span></div>
+                    <div data-key="57" class="key"><kbd>(</kbd><span class="sound">key 9</span></div>
+                    <div data-key="48" class="key"><kbd>)</kbd><span class="sound">key 0</span></div>
+                    <div data-key="189" class="key"><kbd>_下標</kbd><span class="sound">key -</span></div>
+                    <div data-key="187" class="key"><kbd>=</kbd><span class="sound">key =</span></div>
+                </div>
+                <div class="row">
+                    <div data-key="81" class="key"><kbd>x</kbd><span class="sound">key Q</span></div>
+                    <div data-key="87" class="key"><kbd>y</kbd><span class="sound">key W</span></div>
+                    <div data-key="69" class="key"><kbd>z</kbd><span class="sound">key E</span></div>
+                    <div data-key="82" class="key"><kbd>π</kbd><span class="sound">key R</span></div>
+                    <div data-key="84" class="key"><kbd>θ</kbd><span class="sound">key T</span></div>
+                    <div data-key="89" class="key"><kbd>α</kbd><span class="sound">key Y</span></div>
+                    <div data-key="85" class="key"><kbd>β</kbd><span class="sound">key U</span></div>
+                    <div data-key="73" class="key"><kbd>γ</kbd><span class="sound">key I</span></div>
+                    <div data-key="79" class="key"><kbd>{</kbd><span class="sound">key O</span></div>
+                    <div data-key="80" class="key"><kbd>}</kbd><span class="sound">key P</span></div>
+                    <div data-key="219" class="key"><kbd>[</kbd><span class="sound">key [</span></div>
+                    <div data-key="221" class="key"><kbd>]</kbd><span class="sound">key ]</span></div>
+                    <div data-key="220" class="key"><kbd>中斷</kbd><span class="sound">key \</span></div>
+                </div>
+                <div class="row">
+                    <div data-key="65" class="key"><kbd>a</kbd><span class="sound">key A</span></div>
+                    <div data-key="83" class="key"><kbd>b</kbd><span class="sound">key S</span></div>
+                    <div data-key="68" class="key"><kbd>c</kbd><span class="sound">key D</span></div>
+                    <div data-key="70" class="key"><kbd>d</kbd><span class="sound">key F</span></div>
+                    <div data-key="71" class="key"><kbd>h</kbd><span class="sound">key G</span></div>
+                    <div data-key="72" class="key"><kbd>i</kbd><span class="sound">key H</span></div>
+                    <div data-key="74" class="key"><kbd>j</kbd><span class="sound">key J</span></div>
+                    <div data-key="75" class="key"><kbd>k</kbd><span class="sound">key K</span></div>
+                    <div data-key="76" class="key"><kbd>m</kbd><span class="sound">key L</span></div>
+                    <div data-key="186" class="key"><kbd>n</kbd><span class="sound">key ;</span></div>
+                    <div data-key="222" class="key"><kbd></kbd><span class="sound">key '</span></div>
+                </div>
+                <div class="row">
+                    <div data-key="90" class="key"><kbd>A</kbd><span class="sound">key Z</span></div>
+                    <div data-key="88" class="key"><kbd>B</kbd><span class="sound">key X</span></div>
+                    <div data-key="67" class="key"><kbd>C</kbd><span class="sound">key C</span></div>
+                    <div data-key="86" class="key"><kbd>D</kbd><span class="sound">key V</span></div>
+                    <div data-key="66" class="key"><kbd>E</kbd><span class="sound">key B</span></div>
+                    <div data-key="78" class="key"><kbd>F</kbd><span class="sound">key N</span></div>
+                    <div data-key="77" class="key"><kbd>G</kbd><span class="sound">key M</span></div>
+                    <div data-key="188" class="key"><kbd>H</kbd><span class="sound">key ,</span></div>
+                    <div data-key="190" class="key"><kbd></kbd><span class="sound">key .</span></div>
+                    <div data-key="193" class="key"><kbd></kbd><span class="sound">key /</span></div>
+                </div>
+            </div>
+            <!-- 右方數字鍵 -->
+            <div class="numbpad">
+                <div class="row">
+                    <div data-key="107" class="key"><kbd>+</kbd><span class="sound">num +</span></div>
+                    <div data-key="109" class="key"><kbd>-</kbd><span class="sound">num -</span></div>
+                    <div data-key="106" class="key"><kbd>×</kbd><span class="sound">num *</span></div>
+                    <div data-key="111" class="key"><kbd>÷</kbd><span class="sound">num /</span></div>
+                </div>
+                <div class="row">
+                    <div data-key="103" class="key"><kbd>7</kbd><span class="sound">num 7</span></div>
+                    <div data-key="104" class="key"><kbd>8</kbd><span class="sound">num 8</span></div>
+                    <div data-key="105" class="key"><kbd>9</kbd><span class="sound">num 9</span></div>
+                </div>
+                <div class="row">
+                    <div data-key="100" class="key"><kbd>4</kbd><span class="sound">num 4</span></div>
+                    <div data-key="101" class="key"><kbd>5</kbd><span class="sound">num 5</span></div>
+                    <div data-key="102" class="key"><kbd>6</kbd><span class="sound">num 6</span></div>
+                </div>
+                <div class="row">
+                    <div data-key="97" class="key"><kbd>1</kbd><span class="sound">num 1</span></div>
+                    <div data-key="98" class="key"><kbd>2</kbd><span class="sound">num 2</span></div>
+                    <div data-key="99" class="key"><kbd>3</kbd><span class="sound">num 3</span></div>
+                </div>
+                <div class="row">
+                    <div data-key="96" class="key"><kbd>0</kbd><span class="sound">num 0</span></div>
+                    <div data-key="110" class="key"><kbd>.</kbd><span class="sound">num .</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const keys = document.querySelectorAll('.key')
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+        window.addEventListener('keydown', showWord)
+
+        const left = document.querySelector(`.left`)
+        const right = document.querySelector(`.right`)
+
+        // 按鍵設定
+        function showWord(e) {
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+            key.classList.add('playing')
+            const keyNote = key.dataset.key
+            // 左方文字鍵
+            // row1
+            if (keyNote == 49) { left.innerHTML += '≠'; copyText.value += '\\,≠' }
+            else if (keyNote == 50) { left.innerHTML += ','; copyText.value += '\\,,' }
+            else if (keyNote == 51) { left.innerHTML += '￣線段'; copyText.value += '\\,\\upper{' }
+            // else if (keyNote == 52) {
+            //     left.innerHTML += '︵弧線'
+            //     copyText.value += '\\,\\upper忘記惹{'
+            // }
+            // else if (keyNote == 53) {
+            //     left.innerHTML += '→向量'
+            //     copyText.value += '\\,\\upper忘記惹{'
+            // }
+            else if (keyNote == 54) { left.innerHTML += '平方'; copyText.value += '^2' }
+            else if (keyNote == 55) { left.innerHTML += '√根號'; copyText.value += '\\,\\sqrt{' }
+            else if (keyNote == 56) { left.innerHTML += '分數'; copyText.value += '\\,\\frac{' }
+            else if (keyNote == 57) { left.innerHTML += '('; copyText.value += '\\,(' }
+            else if (keyNote == 48) { left.innerHTML += ')'; copyText.value += '\\,)' }
+            else if (keyNote == 189) { left.innerHTML += '下標'; copyText.value += '_' }
+            else if (keyNote == 187) { left.innerHTML += '='; copyText.value += '\\,=' }
+            // row2
+            else if (keyNote == 81) { left.innerHTML += 'x'; copyText.value += '\\,x' }
+            else if (keyNote == 87) { left.innerHTML += 'y'; copyText.value += '\\,y' }
+            else if (keyNote == 69) { left.innerHTML += 'z'; copyText.value += '\\,z' }
+            else if (keyNote == 82) { left.innerHTML += 'π'; copyText.value += '\\,\\pi' }
+            else if (keyNote == 84) { left.innerHTML += 'θ'; copyText.value += '\\,\\theta' }
+            else if (keyNote == 89) { left.innerHTML += 'α'; copyText.value += '\\,\\alpha' }
+            else if (keyNote == 85) { left.innerHTML += 'β'; copyText.value += '\\,\\beta' }
+            else if (keyNote == 73) { left.innerHTML += 'γ'; copyText.value += '\\,\\gamma' }
+            else if (keyNote == 79) { left.innerHTML += '{'; copyText.value += '\\,{' }
+            else if (keyNote == 80) { left.innerHTML += '}'; copyText.value += '\\,}' }
+            else if (keyNote == 219) { left.innerHTML += '['; copyText.value += '\\,[' }
+            else if (keyNote == 221) { left.innerHTML += ']'; copyText.value += '\\,]' }
+            else if (keyNote == 220) { left.innerHTML += '中斷'; copyText.value += '}' }
+            // row3
+            else if (keyNote == 65) { left.innerHTML += 'a'; copyText.value += '\\,a' }
+            else if (keyNote == 83) { left.innerHTML += 'b'; copyText.value += '\\,b' }
+            else if (keyNote == 68) { left.innerHTML += 'c'; copyText.value += '\\,c' }
+            else if (keyNote == 70) { left.innerHTML += 'd'; copyText.value += '\\,d' }
+            else if (keyNote == 71) { left.innerHTML += 'h'; copyText.value += '\\,h' }
+            else if (keyNote == 72) { left.innerHTML += 'i'; copyText.value += '\\,i' }
+            else if (keyNote == 74) { left.innerHTML += 'j'; copyText.value += '\\,j' }
+            else if (keyNote == 75) { left.innerHTML += 'k'; copyText.value += '\\,k' }
+            else if (keyNote == 76) { left.innerHTML += 'm'; copyText.value += '\\,m' }
+            else if (keyNote == 186) { left.innerHTML += 'n'; copyText.value += '\\,n' }
+            // else if (keyNote == 222) {
+            //     left.innerHTML += 'n'
+            //     copyText.value += '\\,n'
+            // }
+            else if (keyNote == 90) { left.innerHTML += 'A'; copyText.value += 'A' }
+            else if (keyNote == 88) { left.innerHTML += 'B'; copyText.value += 'B' }
+            else if (keyNote == 67) { left.innerHTML += 'C'; copyText.value += 'C' }
+            else if (keyNote == 86) { left.innerHTML += 'D'; copyText.value += 'D' }
+            else if (keyNote == 66) { left.innerHTML += 'E'; copyText.value += 'E' }
+            else if (keyNote == 78) { left.innerHTML += 'F'; copyText.value += 'F' }
+            else if (keyNote == 77) { left.innerHTML += 'G'; copyText.value += 'G' }
+            else if (keyNote == 188) { left.innerHTML += 'H'; copyText.value += 'H' }
+            // else if (keyNote == 190) {
+            //     left.innerHTML += 'n'
+            //     copyText.value += '\\,n'
+            // }
+            // else if (keyNote == 193) {
+            //     left.innerHTML += 'n'
+            //     copyText.value += '\\,n'
+            // }
+
+            // 右方數字鍵
+            // row1
+            else if (keyNote == 107) { left.innerHTML += '+'; copyText.value += '\\,+' }
+            else if (keyNote == 109) { left.innerHTML += '-'; copyText.value += '\\,-' }
+            // else if (keyNote == 106) {
+            //     left.innerHTML += '×'
+            //     copyText.value += '\\,-'
+            // }
+            else if (keyNote == 111) { left.innerHTML += '÷'; copyText.value += '\\,÷' }
+            // row2
+            else if (keyNote == 103) { left.innerHTML += '7'; copyText.value += '\\,7' }
+            else if (keyNote == 104) { left.innerHTML += '8'; copyText.value += '\\,8' }
+            else if (keyNote == 105) { left.innerHTML += '9'; copyText.value += '\\,9' }
+            // row3
+            else if (keyNote == 100) { left.innerHTML += '4'; copyText.value += '\\,4' }
+            else if (keyNote == 101) { left.innerHTML += '5'; copyText.value += '\\,5' }
+            else if (keyNote == 102) { left.innerHTML += '6'; copyText.value += '\\,6' }
+            // row4
+            else if (keyNote == 97) { left.innerHTML += '1'; copyText.value += '\\,1' }
+            else if (keyNote == 98) { left.innerHTML += '2'; copyText.value += '\\,2' }
+            else if (keyNote == 99) { left.innerHTML += '3'; copyText.value += '\\,3' }
+            // row5
+            else if (keyNote == 96) { left.innerHTML += '0'; copyText.value += '0' }
+            else if (keyNote == 110) { left.innerHTML += '.'; copyText.value += '.' }
+        }
+
+        // 點擊效果
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') return // skip it if it's not a transform
+            this.classList.remove('playing')
+        }
+
+        var copyText = document.getElementById("myInput")
+        const copybtn = document.querySelector(`.copybtn`)
+
+        // copy
+        function copyBtn() {
+            copyText.select()
+            navigator.clipboard.writeText(copyText.value) // Copy the text inside the text field
+            copybtn.classList.add('copied')
+            copybtn.innerHTML = 'Copied !!'
+        }
+        // reset
+        function resetText() {
+            left.innerHTML = ''; copyText.value = ''
+            copybtn.classList.remove('copied')
+            copybtn.innerHTML = 'Copy'
+        }
+    </script>
+</body>
+
+</html>
