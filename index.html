@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <!-- sounds ref : https://taira-komori.jpn.org/instrument01tw.html -->
 </head>
 
 <body>
@@ -80,8 +79,8 @@
                     <div data-key="78" class="key"><kbd>F</kbd><span class="sound">key N</span></div>
                     <div data-key="77" class="key"><kbd>G</kbd><span class="sound">key M</span></div>
                     <div data-key="188" class="key"><kbd>H</kbd><span class="sound">key ,</span></div>
-                    <div data-key="190" class="key"><kbd></kbd><span class="sound">key .</span></div>
-                    <div data-key="193" class="key"><kbd></kbd><span class="sound">key /</span></div>
+                    <div data-key="190" class="key"><kbd>|絕對值</kbd><span class="sound">key .</span></div>
+                    <div data-key="191" class="key"><kbd>絕對值|</kbd><span class="sound">key /</span></div>
                 </div>
             </div>
             <!-- 右方數字鍵 -->
@@ -182,14 +181,8 @@
             else if (keyNote == 78) { left.innerHTML += 'F'; copyText.value += 'F' }
             else if (keyNote == 77) { left.innerHTML += 'G'; copyText.value += 'G' }
             else if (keyNote == 188) { left.innerHTML += 'H'; copyText.value += 'H' }
-            // else if (keyNote == 190) {
-            //     left.innerHTML += 'n'
-            //     copyText.value += '\\,n'
-            // }
-            // else if (keyNote == 193) {
-            //     left.innerHTML += 'n'
-            //     copyText.value += '\\,n'
-            // }
+            else if (keyNote == 190) { left.innerHTML += '|絕對值'; copyText.value += '\\,\\mid\\,' }
+            else if (keyNote == 191) { left.innerHTML += '絕對值|'; copyText.value += '\\,\\,\\mid' }
 
             // 右方數字鍵
             // row1
