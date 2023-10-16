@@ -135,16 +135,10 @@
             // row1
             if (keyNote == 49) { left.innerHTML += '≠'; copyText.value += '\\,≠' }
             else if (keyNote == 50) { left.innerHTML += ','; copyText.value += '\\,,' }
-            else if (keyNote == 51) { left.innerHTML += '￣線段'; copyText.value += '\\,\\upper{' }
-            // else if (keyNote == 52) {
-            //     left.innerHTML += '︵弧線'
-            //     copyText.value += '\\,\\upper忘記惹{'
-            // }
-            // else if (keyNote == 53) {
-            //     left.innerHTML += '→向量'
-            //     copyText.value += '\\,\\upper忘記惹{'
-            // }
-            else if (keyNote == 54) { left.innerHTML += '平方'; copyText.value += '^2' }
+            else if (keyNote == 51) { left.innerHTML += '￣線段'; copyText.value += '\\,\\upper\\vert{' }
+            else if (keyNote == 52) {left.innerHTML += '︵弧線';copyText.value += '\\,\\upper\\({'}
+            else if (keyNote == 53) {left.innerHTML += '→向量'; copyText.value += '\\,\\upper\\upharpoon{'}
+            else if (keyNote == 54) { left.innerHTML += '平方'; copyText.value += '\\,^2' }
             else if (keyNote == 55) { left.innerHTML += '√根號'; copyText.value += '\\,\\sqrt{' }
             else if (keyNote == 56) { left.innerHTML += '分數'; copyText.value += '\\,\\frac{' }
             else if (keyNote == 57) { left.innerHTML += '('; copyText.value += '\\,(' }
@@ -201,10 +195,7 @@
             // row1
             else if (keyNote == 107) { left.innerHTML += '+'; copyText.value += '\\,+' }
             else if (keyNote == 109) { left.innerHTML += '-'; copyText.value += '\\,-' }
-            // else if (keyNote == 106) {
-            //     left.innerHTML += '×'
-            //     copyText.value += '\\,-'
-            // }
+            else if (keyNote == 106) {left.innerHTML += '×';copyText.value += ' \\,\scale{0.8&0.8}×\\,'}
             else if (keyNote == 111) { left.innerHTML += '÷'; copyText.value += '\\,÷' }
             // row2
             else if (keyNote == 103) { left.innerHTML += '7'; copyText.value += '\\,7' }
