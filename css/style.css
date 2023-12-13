@@ -75,6 +75,7 @@
   
   .playing {
     border-color: orange;
+    transform: none;
   }
   
   .copied {
