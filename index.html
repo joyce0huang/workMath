@@ -80,7 +80,7 @@
                     <div data-key="77" class="key"><kbd>G</kbd><span class="sound">key M</span></div>
                     <div data-key="188" class="key"><kbd>H</kbd><span class="sound">key ,</span></div>
                     <div data-key="190" class="key"><kbd>|絕對值</kbd><span class="sound">key .</span></div>
-                    <div data-key="191" class="key"><kbd></kbd><span class="sound">key /</span></div>
+                    <div data-key="191" class="key"><kbd>·</kbd><span class="sound">key /</span></div>
                 </div>
             </div>
             <!-- 右方數字鍵 -->
@@ -182,7 +182,7 @@
             else if (keyNote == 77) { left.innerHTML += 'G'; copyText.value += 'G' }
             else if (keyNote == 188) { left.innerHTML += 'H'; copyText.value += 'H' }
             else if (keyNote == 190) { left.innerHTML += '|絕對值'; copyText.value += '\\,\\mid\\,' }
-            // else if (keyNote == 191) { left.innerHTML += '絕對值|'; copyText.value += '\\,\\,\\mid' }
+            else if (keyNote == 191) { left.innerHTML += '·乘號'; copyText.value += '\\!·\\!' }
 
             // 右方數字鍵
             // row1
