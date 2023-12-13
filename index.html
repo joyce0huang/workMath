@@ -80,7 +80,7 @@
                     <div data-key="77" class="key"><kbd>G</kbd><span class="sound">key M</span></div>
                     <div data-key="188" class="key"><kbd>H</kbd><span class="sound">key ,</span></div>
                     <div data-key="190" class="key"><kbd>|絕對值</kbd><span class="sound">key .</span></div>
-                    <div data-key="191" class="key"><kbd>絕對值|</kbd><span class="sound">key /</span></div>
+                    <div data-key="191" class="key"><kbd></kbd><span class="sound">key /</span></div>
                 </div>
             </div>
             <!-- 右方數字鍵 -->
@@ -138,8 +138,8 @@
             else if (keyNote == 52) {left.innerHTML += '︵弧線';copyText.value += '\\,\\upper\\({'}
             else if (keyNote == 53) {left.innerHTML += '→向量'; copyText.value += '\\,\\upper\\upharpoon{'}
             else if (keyNote == 54) { left.innerHTML += '平方'; copyText.value += '\\,^2' }
-            else if (keyNote == 55) { left.innerHTML += '√根號'; copyText.value += '\\,\\sqrt{' }
-            else if (keyNote == 56) { left.innerHTML += '分數'; copyText.value += '\\,\\frac{' }
+            else if (keyNote == 55) { left.innerHTML += '√根號'; copyText.value += '\\,\\sqrt{根號}' }
+            else if (keyNote == 56) { left.innerHTML += '分數'; copyText.value += '\\,\\frac{分}{數}}' }
             else if (keyNote == 57) { left.innerHTML += '('; copyText.value += '\\,(' }
             else if (keyNote == 48) { left.innerHTML += ')'; copyText.value += '\\,)' }
             else if (keyNote == 189) { left.innerHTML += '下標'; copyText.value += '_' }
@@ -182,7 +182,7 @@
             else if (keyNote == 77) { left.innerHTML += 'G'; copyText.value += 'G' }
             else if (keyNote == 188) { left.innerHTML += 'H'; copyText.value += 'H' }
             else if (keyNote == 190) { left.innerHTML += '|絕對值'; copyText.value += '\\,\\mid\\,' }
-            else if (keyNote == 191) { left.innerHTML += '絕對值|'; copyText.value += '\\,\\,\\mid' }
+            // else if (keyNote == 191) { left.innerHTML += '絕對值|'; copyText.value += '\\,\\,\\mid' }
 
             // 右方數字鍵
             // row1
@@ -191,17 +191,17 @@
             else if (keyNote == 106) {left.innerHTML += '×';copyText.value += ' \\\,\\scale{0.8&0.8}×\\,'}
             else if (keyNote == 111) { left.innerHTML += '÷'; copyText.value += '\\,÷' }
             // row2
-            else if (keyNote == 103) { left.innerHTML += '7'; copyText.value += '\\,7' }
-            else if (keyNote == 104) { left.innerHTML += '8'; copyText.value += '\\,8' }
-            else if (keyNote == 105) { left.innerHTML += '9'; copyText.value += '\\,9' }
+            else if (keyNote == 103) { left.innerHTML += '7'; copyText.value += '7' }
+            else if (keyNote == 104) { left.innerHTML += '8'; copyText.value += '8' }
+            else if (keyNote == 105) { left.innerHTML += '9'; copyText.value += '9' }
             // row3
-            else if (keyNote == 100) { left.innerHTML += '4'; copyText.value += '\\,4' }
-            else if (keyNote == 101) { left.innerHTML += '5'; copyText.value += '\\,5' }
-            else if (keyNote == 102) { left.innerHTML += '6'; copyText.value += '\\,6' }
+            else if (keyNote == 100) { left.innerHTML += '4'; copyText.value += '4' }
+            else if (keyNote == 101) { left.innerHTML += '5'; copyText.value += '5' }
+            else if (keyNote == 102) { left.innerHTML += '6'; copyText.value += '6' }
             // row4
-            else if (keyNote == 97) { left.innerHTML += '1'; copyText.value += '\\,1' }
-            else if (keyNote == 98) { left.innerHTML += '2'; copyText.value += '\\,2' }
-            else if (keyNote == 99) { left.innerHTML += '3'; copyText.value += '\\,3' }
+            else if (keyNote == 97) { left.innerHTML += '1'; copyText.value += '1' }
+            else if (keyNote == 98) { left.innerHTML += '2'; copyText.value += '2' }
+            else if (keyNote == 99) { left.innerHTML += '3'; copyText.value += '3' }
             // row5
             else if (keyNote == 96) { left.innerHTML += '0'; copyText.value += '0' }
             else if (keyNote == 110) { left.innerHTML += '.'; copyText.value += '.' }
