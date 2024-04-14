@@ -137,13 +137,13 @@
             else if (keyNote == 51) { left.innerHTML += '￣線段'; copyText.value += '\\,\\upper\\vert{線段}' }
             else if (keyNote == 52) {left.innerHTML += '︵弧線';copyText.value += '\\,\\upper\\({弧線}'}
             else if (keyNote == 53) {left.innerHTML += '→向量'; copyText.value += '\\,\\upper\\upharpoon{向量}'}
-            else if (keyNote == 54) { left.innerHTML += '平方'; copyText.value += '\\,^2' }
+            else if (keyNote == 54) { left.innerHTML += '平方'; copyText.value += '\\;^2' }
             else if (keyNote == 55) { left.innerHTML += '√根號'; copyText.value += '\\,\\sqrt{根號}' }
             else if (keyNote == 56) { left.innerHTML += '分數'; copyText.value += '\\,\\frac{分}{數}' }
-            else if (keyNote == 57) { left.innerHTML += '('; copyText.value += '\\,(' }
-            else if (keyNote == 48) { left.innerHTML += ')'; copyText.value += '\\,)' }
-            else if (keyNote == 189) { left.innerHTML += '下標'; copyText.value += '_' }
-            else if (keyNote == 187) { left.innerHTML += '='; copyText.value += '\\,=' }
+            else if (keyNote == 57) { left.innerHTML += '('; copyText.value += '\\,(\\,' }
+            else if (keyNote == 48) { left.innerHTML += ')'; copyText.value += '\\,)\\,' }
+            else if (keyNote == 189) { left.innerHTML += '下標'; copyText.value += '\\;_' }
+            else if (keyNote == 187) { left.innerHTML += '='; copyText.value += '\\,=\\,' }
             // row2
             else if (keyNote == 81) { left.innerHTML += 'x'; copyText.value += '\\,x' }
             else if (keyNote == 87) { left.innerHTML += 'y'; copyText.value += '\\,y' }
@@ -153,10 +153,10 @@
             else if (keyNote == 89) { left.innerHTML += 'α'; copyText.value += '\\,\\alpha' }
             else if (keyNote == 85) { left.innerHTML += 'β'; copyText.value += '\\,\\beta' }
             else if (keyNote == 73) { left.innerHTML += 'γ'; copyText.value += '\\,\\gamma' }
-            else if (keyNote == 79) { left.innerHTML += '{'; copyText.value += '\\,{' }
-            else if (keyNote == 80) { left.innerHTML += '}'; copyText.value += '\\,}' }
-            else if (keyNote == 219) { left.innerHTML += '['; copyText.value += '\\,[' }
-            else if (keyNote == 221) { left.innerHTML += ']'; copyText.value += '\\,]' }
+            else if (keyNote == 79) { left.innerHTML += '{'; copyText.value += '\\,{\\,' }
+            else if (keyNote == 80) { left.innerHTML += '}'; copyText.value += '\\,}\\,' }
+            else if (keyNote == 219) { left.innerHTML += '['; copyText.value += '\\,[\\,' }
+            else if (keyNote == 221) { left.innerHTML += ']'; copyText.value += '\\,]\\,' }
             else if (keyNote == 220) { left.innerHTML += '中斷'; copyText.value += '}' }
             // row3
             else if (keyNote == 65) { left.innerHTML += 'a'; copyText.value += '\\,a' }
@@ -186,10 +186,10 @@
 
             // 右方數字鍵
             // row1
-            else if (keyNote == 107) { left.innerHTML += '+'; copyText.value += '\\,+' }
-            else if (keyNote == 109) { left.innerHTML += '-'; copyText.value += '\\,-' }
-            else if (keyNote == 106) {left.innerHTML += '×';copyText.value += ' \\\,\\scale{0.8&0.8}×'}
-            else if (keyNote == 111) { left.innerHTML += '÷'; copyText.value += '\\,÷' }
+            else if (keyNote == 107) { left.innerHTML += '+'; copyText.value += '\\,+\\,' }
+            else if (keyNote == 109) { left.innerHTML += '-'; copyText.value += '\\,-\\,' }
+            else if (keyNote == 106) {left.innerHTML += '×';copyText.value += '\\\,\\scale{0.8&0.8}×\\,'}
+            else if (keyNote == 111) { left.innerHTML += '÷'; copyText.value += '\\,÷\\,' }
             // row2
             else if (keyNote == 103) { left.innerHTML += '7'; copyText.value += '7' }
             else if (keyNote == 104) { left.innerHTML += '8'; copyText.value += '8' }
